@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form>
+	<input type="text" name="name" placeholder="Enter your name">
+	<button
+		data-liveview-function="say_hello"
+		data-action="click->page#run">
+		Say Hello
+	</button>
+
+	<div id="greeting">
+		<h1>Hello, World!</h1>
+	</div>
+</form>
+{% endblock %}

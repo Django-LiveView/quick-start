@@ -1,0 +1,15 @@
+{% load static %}
+{% load liveview %}
+<!DOCTYPE html>
+<html lang="en" data-room="{% liveview_room_uuid %}">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}My Site{% endblock %}</title>
+</head>
+<body data-controller="page">
+	{% block content %}{% endblock %}
+
+	<!-- Django LiveView JavaScript -->
+	<script src="{% static 'liveview/liveview.min.js' %}" defer></script>
+</body>
+</html>
